@@ -49,13 +49,10 @@ export default class Slide {
 
     changeslideOnEnd(){
         if (this.dist.movement > 120 && this.index.next !== undefined) {
-            console.log('direita');
             this.activeNextSlide();
         } else if (this.dist.movement < -120  && this.index.prev !== undefined) {
-            console.log('esquerda');    
             this.activePrevSlide();
         } else {
-            console.log('parado');
             this.changeSlide(this.index.active);
         }
         }
